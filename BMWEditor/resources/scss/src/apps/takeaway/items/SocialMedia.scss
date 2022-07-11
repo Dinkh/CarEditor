@@ -1,0 +1,21 @@
+.ta-social-media {
+  .ta-social-btn {
+    padding: 25px 20px 7px;
+    background: transparent;
+    border: 0 none;
+    letter-spacing: .66px;
+    color: #a2834e;
+    font: {
+      family: 'Gentium Plus';
+      size: 25px;
+      weight: 600;
+    }
+
+    padding: 20px;
+    font-size: 17px;
+
+    &:focus, &:active {
+      border-bottom: 0 none;
+    }
+  }
+}

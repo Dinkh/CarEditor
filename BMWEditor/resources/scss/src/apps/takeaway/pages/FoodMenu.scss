@@ -1,0 +1,99 @@
+.neo-carousel {
+  height: auto;
+  background-color: wheat;
+
+  .neo-carousel-inner {
+    height: 6rem;
+    background-color: wheat;
+    border: 1px solid darkgoldenrod;
+    color: var(--list-container-list-color);
+
+    .neo-carousel-item {
+      height: auto;
+
+      &.neo-carousel-translate-x-0 {
+        outline: 1px solid rgba(184, 134, 11, .5);
+        outline-offset: 5px;
+      }
+
+      .ta-quote {
+        text-align: center;
+        font-weight: 600;
+        padding: 0 0 10px;
+      }
+      .ta-carousel-item-details {
+        text-align: center;
+        font-weight: 100;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.ta-foodmenu {
+  .neo-toolbar {
+    background-color: rgba(155,12,30, .5);
+    text-align: center;
+    padding: 1.5em 15px;
+    color: wheat;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  .neo-list {
+    background-color: wheat;
+    padding: 20px 0;
+
+    .neo-list-item.ta-list-item {
+      opacity: 0;
+      transition: opacity 200ms 0ms ease-in-out;
+      background-color: wheat;
+      cursor: pointer;
+      white-space: nowrap;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      padding: 0.6em;
+      border-bottom: 1px solid rgba(20,20,20,.2);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover, &.neo-selected {
+        background-color: wheat;
+        color: black;
+        border-radius: 5px;
+      }
+
+      &.visible {
+        opacity: 1;
+        transition: opacity 200ms 0ms ease-in-out;
+      }
+
+      .ta-list-item-dish-name {
+        font-weight: 600;
+        padding: 0.5em;
+        font-size: 1.5em;
+      }
+
+      .ta-list-item-details {
+        display: flex;
+        font-size: .75em;
+        white-space: pre-wrap;
+        text-align: center;
+      }
+
+      .ta-list-item-price {
+        font-style: italic;
+        padding: 0.2em;
+        background-color: rgba(155,155,15,.2);
+        border-radius: 5px;
+        margin-top: 9px;
+      }
+    }
+  }
+}

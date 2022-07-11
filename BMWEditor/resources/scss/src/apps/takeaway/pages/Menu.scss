@@ -1,0 +1,124 @@
+.ta-page-menu {
+  /**
+   * BASE
+   */
+  position: fixed;
+  inset: 0;
+  max-height: 100vh;
+  height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+  margin-right: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  padding: 0 3vw;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #f7f3e8;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 200ms 0ms ease-in-out, visibility 0ms 200ms linear;
+
+  color: #a2834e;
+  font-family: 'Gentium Plus', calluna;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    margin-right: 0;
+    transition: opacity 200ms 0ms ease-in-out, visibility 0ms 0ms linear;
+  }
+
+  & > * {
+    color: #a2834e;
+    font-family: 'Gentium Plus', calluna;
+  }
+
+  /**
+   * OVERRIDE
+   */
+  .neo-container {
+    background-color: transparent;
+  }
+
+  /**
+   * HEADER
+   */
+  .ta-menu-header {
+    font-size: 18px;
+
+    .header-text {
+      padding: 12px;
+      letter-spacing: 5.7px;
+      color:  rgba(162, 131, 78, 0.6);
+      font: {
+        family: 'Dancing Script', Helvetica, sans-serif;
+        weight: 100;
+        size: 32px;
+        style: italic;
+      }
+    }
+
+    .ta-menu-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 18px;
+    }
+  }
+
+  /**
+   * SUBHEADER
+   */
+  .ta-menu-subheader {
+    color: #a2834e;
+    font: {
+      family: 'Lora', georgia,'palatino',serif;
+      size: 16px;
+      weight: normal;
+      style: italic;
+    }
+  }
+
+  /**
+   * BUTTON
+   */
+  .ta-menu-btn {
+    padding: 25px 20px 7px;
+    background: transparent;
+    border: 0 none;
+    letter-spacing: .66px;
+    color: #a2834e;
+    font: {
+      family: 'Gentium Plus';
+      size: 25px;
+      weight: 600;
+    }
+
+    &:focus, &:active {
+      border-bottom: 1px solid;
+    }
+  }
+
+  .ta-social-btn {
+    padding: 20px;
+    font-size: 17px;
+
+    &:focus, &:active {
+      border-bottom: 0 none;
+    }
+  }
+
+  .ta-menu-close-btn {
+    &:focus, &:active {
+      border-bottom: 0 none;
+    }
+  }
+}

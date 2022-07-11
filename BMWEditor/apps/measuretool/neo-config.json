@@ -1,0 +1,16 @@
+{
+    "appPath": "../../apps/measuretool/app.mjs",
+    "basePath": "../../",
+    "environment": "development",
+    "mainPath": "../node_modules/neo.mjs/src/Main.mjs",
+    "useSharedWorkers": true,
+    "mainThreadAddons": [
+        "DragDrop",
+        "LocalStorage",
+        "Stylesheet"
+    ],
+    "themes": [
+        "neo-theme-light"
+    ],
+    "workerBasePath": "../../node_modules/neo.mjs/src/worker/"
+}

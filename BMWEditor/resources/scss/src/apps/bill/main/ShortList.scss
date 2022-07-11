@@ -1,0 +1,8 @@
+.bill-shortlist {
+  padding: 0;
+
+  & > div:nth-child(2n) {
+    margin: 5px 0;
+    background-color: lightgrey;
+  }
+}

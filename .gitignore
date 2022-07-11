@@ -1,0 +1,24 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+**/package-lock.json
+
+# resources
+/BMWEditor/resources/theme-map*.json
+/BMWEditor/resources/files/car/*
+
+# dependencies
+/BMWEditor/dist
+/BMWEditor/docs/output
+/BMWEditor/examples
+/BMWEditor/node_modules
+
+# IDEs and editors
+/.idea/
+.project
+.classpath
+*.launch
+.settings
+
+#System Files
+.DS_Store
+Thumbs.db

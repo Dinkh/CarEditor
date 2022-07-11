@@ -1,0 +1,63 @@
+.ta-list-button {
+  --ta-list-button-height: 60px;
+  --ta-list-button-width: 300px;
+  --ta-list-button-border-color: rgba(55,55,55, .4);
+  --ta-list-button-button-color: rgba(55,55,55, .9);
+  --ta-list-button-add-color: rgba(55,55,55, .9);
+  --ta-list-button-add-background: cornsilk;
+  --ta-list-button-add-dimensions: 30px;
+
+  position: relative;
+  width: var(--ta-list-button-width);
+  height: var(--ta-list-button-height);
+
+  .neo-container {
+    background:transparent;
+
+    .ta-list-button-sub {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      background-color: transparent;
+      border-radius: 0;
+      border-color: var(--ta-list-button-border-color);
+      border-top-width: 0;
+      border-left-width: 0;
+      border-bottom-width: 0;
+      color: var(--ta-list-button-button-color);
+
+      &.ta-list-button-add {
+        flex: unset!important;
+        justify-content: center;
+        width: 20px;
+
+        .neo-button-glyph::before {
+           position: absolute;
+           right: -14px;
+           background: var(--ta-list-button-add-background);
+           height: var(--ta-list-button-add-dimensions);
+           width: var(--ta-list-button-add-dimensions);
+           border-radius: 50%;
+           align-items: center;
+           justify-content: center;
+           display: flex;
+           top: 16px;
+           border: 1px solid black;
+        }
+      }
+    }
+  }
+
+  .ta-list-button-text {
+    position: absolute;
+    inset: 5px 30px 15px 10px;
+    text-align: center;
+    padding: 4px;
+    font: {
+      size: 30px;
+      weight: 600;
+    }
+    pointer-events:none;
+  }
+}

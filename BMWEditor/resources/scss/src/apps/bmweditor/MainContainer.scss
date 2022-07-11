@@ -1,0 +1,60 @@
+$dark-color: slategrey;
+
+.floating-window {
+  border-radius: 5px;
+  border: 3px solid lightgrey;
+  position: absolute;
+  box-shadow: 5px 5px 10px $dark-color;
+
+  .bmw-toolbar {
+    height: 40px;
+    padding: 5px 10px;
+    opacity: 1;
+  }
+}
+
+.bmw-toolbar {
+  opacity: 0;
+  height: 0;
+
+  border-bottom: 1px solid darkgrey;
+  background: rgb(157, 157, 157);
+  background: linear-gradient(0deg, rgba(157, 157, 157, 1) 0%, rgba(191, 191, 191, 1) 30%, rgba(232, 232, 232, 1) 67%, rgba(228, 228, 228, 1) 100%);
+
+  .neo-button {
+    background: lightblue;
+    border: 1px solid $dark-color;
+    border-radius: 50%;
+    padding: 5px;
+
+    .neo-button-glyph {
+      color: $dark-color;
+    }
+  }
+}
+
+
+.neo-dialog-wrapper {
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+}
+
+.picking-3d {
+  cursor: crosshair;
+
+  .threejs-click-area {
+    z-index: 10;
+  }
+}
+
+
+.distance-result {
+  display: flex;
+  align-items: center!important;
+  justify-content: center;
+
+  margin: 2px;
+  background: lightblue;
+  border-radius: 2px;
+  border: 1px solid deepskyblue;
+  color: cadetblue;
+}

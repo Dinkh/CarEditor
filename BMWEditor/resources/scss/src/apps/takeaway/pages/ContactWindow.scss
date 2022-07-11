@@ -1,0 +1,98 @@
+.ta-page-contact {
+  /**
+   * BASE
+   */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 3vw;
+  height: 0;
+  pointer-events: none;
+  background-color: #f7f3e8;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: height 200ms 0ms ease-in-out;
+  box-shadow: 0 -1px 15px rgb(25 25 25 / 45%);
+
+
+  & > * {
+    color: #a2834e;
+    font-family: 'Gentium Plus', calluna;
+  }
+
+  &.open {
+    height: 340px;
+    pointer-events: auto;
+    transition: height 200ms 0ms ease-in-out;
+  }
+
+  /**
+   * OVERRIDE
+   */
+  .neo-container {
+    background-color: transparent;
+  }
+
+  /**
+   * HEADER
+   */
+  .ta-contact-header {
+    font-style: italic;
+    letter-spacing: 5.7px;
+    text-transform: uppercase;
+  }
+
+  /**
+   * BUTTON
+   */
+  .ta-contact-btn {
+    border: 0 none;
+    padding: 30px 0;
+    background: transparent;
+    letter-spacing: .66px;
+    color: #a2834e;
+    font: {
+      size: 20px;
+      weight: 100;
+    }
+  }
+
+  /**
+   * ADDRESS
+   */
+  .ta-contact-address {
+    text-decoration: none;
+    display:flex;
+    padding: 0;
+    font: {
+      size: 16px;
+      weight: 600;
+      style: italic;
+    }
+
+    .neo-button-glyph {
+      font-size: 35px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      padding: 0 15px 0 0;
+      opacity: 0.5;
+    }
+  }
+
+  /**
+   * COMPANY
+   */
+  .ta-contact-company {
+    color: rgba(162, 131, 78, .6);
+    padding: 20px 0;
+    font: {
+      family: 'Dancing Script', 'Lora', georgia, 'palatino', serif;
+      size: 32px;
+      weight: 100;
+      style: italic;
+    }
+  }
+}

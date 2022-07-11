@@ -1,0 +1,58 @@
+.ta-main-header {
+  position: fixed !important;
+  z-index: 1;
+  background: rgba(0, 0, 0, .75);
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  .ta-navigation {
+    padding-top: 15px;
+    height: 1px;
+    transition: height .5s;
+  }
+
+  .ta-navigation .ta-nav-btn {
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .ta-burger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: transform .5s;
+  }
+
+  &.active {
+    padding-bottom: 15px;
+    transition: padding .5s;
+
+    .ta-navigation {
+      height: 50px;
+      transition: height .5s;
+
+      .ta-nav-btn {
+        opacity: 1;
+        transition: opacity 1s;
+      }
+    }
+
+    .ta-burger {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      transition: transform .5s;
+
+      &:before {
+        content: "\f00d";
+      }
+    }
+  }
+}

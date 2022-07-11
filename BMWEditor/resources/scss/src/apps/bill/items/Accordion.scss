@@ -1,0 +1,32 @@
+.neo-accordion {
+
+  fieldset {
+    min-height: 35px;
+    margin: 5px 0;
+    transition: flex-grow 500ms 0ms ease-in-out;
+
+    .neo-legend {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      width: 100%;
+      border: 1px solid rgb(192, 192, 192);
+      background-color: white;
+      line-height: 1.8;
+      .neo-legend-icon {
+        font-weight: 600!important;
+        padding-top: 6px;
+      }
+    }
+
+    &.neo-collapsed {
+      // RESET
+      background-color: var(--fieldset-background-color);
+      border: var(--fieldset-border);
+
+      padding: 0 13px;
+      overflow: hidden;
+      flex-grow: 0!important;
+    }
+  }
+}

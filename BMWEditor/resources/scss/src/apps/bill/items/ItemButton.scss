@@ -1,0 +1,80 @@
+.bill-itembutton {
+  --bill-itembutton-height: 50px;
+  --bill-itembutton-width: 300px;
+  --bill-itembutton-add-color: rgba(55, 55, 55, .9);
+  --bill-itembutton-add-background: cornsilk;
+  --bill-itembutton-add-dimensions: 30px;
+  --bill-itembutton-add-right: -14px;
+  --bill-itembutton-add-top: 10px;
+  --bill-itembutton-border-color: rgba(55, 55, 55, .4);
+  --bill-itembutton-button-color: rgba(55, 55, 55, .9);
+  --bill-itembutton-button-height: 67px!important;
+}
+
+.bill-itembutton {
+  position: relative;
+  flex: unset!important;
+  width: var(--bill-itembutton-width);
+  height: var(--bill-itembutton-height);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  & > .neo-container {
+    background:transparent;
+    overflow: visible;
+
+    .bill-itembutton-btn {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      background-color: transparent;
+      border-radius: 0;
+      border: {
+        width: 0;
+        color: var(--bill-itembutton-border-color);
+      }
+      color: var(--bill-itembutton-button-color);
+      height: var(--bill-itembutton-button-height);
+
+      &:nth-child(2) {
+        border-left-width: 1px;
+        border-right-width: 1px;
+      }
+
+      &.bill-itembutton-add {
+        flex: unset!important;
+        justify-content: center;
+        width: 20px;
+        border-left-width: 1px;
+        height: var(--bill-itembutton-height);
+
+        .neo-button-glyph::before {
+          position: absolute;
+          top: var(--bill-itembutton-add-top);
+          right: var(--bill-itembutton-add-right);
+          background: var(--bill-itembutton-add-background);
+          height: var(--bill-itembutton-add-dimensions);
+          width: var(--bill-itembutton-add-dimensions);
+          border-radius: 50%;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+
+  .bill-itembutton-text {
+    position: absolute;
+    inset: 5px 30px 15px 10px;
+    text-align: center;
+    padding: 4px;
+    font: {
+      size: 30px;
+      weight: 600;
+    }
+    pointer-events:none;
+  }
+}
