@@ -51,7 +51,7 @@ class Canvas extends Base {
 
         // Build Color palette
         app.buildColorPalette = function() {
-            var gradient = app.colorctx.createLinearGradient(0, 0, app.$colors.width, 0);
+            let gradient = app.colorctx.createLinearGradient(0, 0, app.$colors.width, 0);
             // Create color gradient
             gradient.addColorStop(0,    "rgb(255,   0,   0)");
             gradient.addColorStop(0.15, "rgb(255,   0, 255)");
@@ -96,8 +96,7 @@ class Canvas extends Base {
             });
 
             app.getColor = function() {
-                var newColor,
-                    imageData = app.colorctx.getImageData(app.colorEventX, app.colorEventY, 1, 1);
+                let imageData = app.colorctx.getImageData(app.colorEventX, app.colorEventY, 1, 1);
 
                 app.selectedColor = 'rgb(' + imageData.data[0] + ', ' + imageData.data[1] + ', ' + imageData.data[2] + ')';
                 console.log('selectedColor', app.selectedColor)
